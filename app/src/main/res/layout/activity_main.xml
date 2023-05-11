@@ -12,14 +12,15 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical"
+            android:layout_margin="10dp">
 
             <EditText
                 android:id="@+id/name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="@string/name"
+                android:hint="Name"
                 android:inputType="text" />
 
             <LinearLayout
@@ -32,7 +33,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:hint="@string/mobile_no"
+                    android:hint="Mobile no."
                     android:inputType="text" />
 
                 <EditText
@@ -40,7 +41,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:hint="@string/no_of_people"
+                    android:hint="No. of people"
                     android:inputType="text" />
 
             </LinearLayout>
@@ -54,7 +55,7 @@
                     android:id="@+id/textView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/reservation_date" />
+                    android:text="Reservation date" />
 
                 <DatePicker
                     android:id="@+id/datePicker"
@@ -67,7 +68,7 @@
                     android:id="@+id/textView2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/reservation_time" />
+                    android:text="Reservation time" />
 
                 <TimePicker
                     android:id="@+id/timePicker"
@@ -78,6 +79,12 @@
 
             </LinearLayout>
 
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Zone" />
+
             <RadioGroup
                 android:id="@+id/zone"
                 android:layout_width="wrap_content"
@@ -87,13 +94,13 @@
                     android:id="@+id/smoking"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/smoking" />
+                    android:text="Smoking" />
 
                 <RadioButton
                     android:id="@+id/nonsmoking"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/non_smoking" />
+                    android:text="Non-smoking" />
 
             </RadioGroup>
 
@@ -106,13 +113,14 @@
                     android:id="@+id/submit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/submit" />
+                    android:text="Submit" />
 
                 <Button
                     android:id="@+id/reset"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/reset" />
+                    android:text="Reset" />
+
             </LinearLayout>
 
         </LinearLayout>

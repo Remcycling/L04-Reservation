@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     DatePicker dp;
     TimePicker tp;
-    //TextView tvDisplay;
+
     Button btnSubmit;
     Button btnReset;
 

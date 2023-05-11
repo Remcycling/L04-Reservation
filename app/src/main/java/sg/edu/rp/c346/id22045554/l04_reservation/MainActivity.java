@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -21,9 +22,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnSubmit;
     Button btnReset;
 
-    RadioGroup smoke;
-    RadioButton smoking;
-    RadioButton nonsmoking;
+    CheckBox area;
 
     EditText name;
     EditText phone;
@@ -41,9 +40,7 @@ public class MainActivity extends AppCompatActivity {
         tp = findViewById(R.id.timePicker);
         btnSubmit = findViewById(R.id.submit);
         btnReset = findViewById(R.id.reset);
-        smoke = findViewById(R.id.zone);
-        smoking = findViewById(R.id.smoking);
-        nonsmoking = findViewById(R.id.nonsmoking);
+        area = findViewById(R.id.checkBox);
 
 
 
@@ -54,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                //Set time to 7:30PM & date to 1 jun 2023
                 String hour = "" + tp.getHour();
                 String min = "" + tp.getMinute();
                 String setTime = " Time: " + hour +":"+ min;
@@ -66,16 +63,17 @@ public class MainActivity extends AppCompatActivity {
                 String setDate = "  Date: " + day + "/" + month + "/"  + year;
 
 
-
+                //for radio buttons
                 String message = "";
-                int smokeChecked = smoke.getCheckedRadioButtonId();
-                if (smokeChecked == R.id.smoking) {
+
+                if (area.isChecked()) {
                     message = "Smoking";
                 }
                 else {
                     message = "Non-Smoking";
                 }
 
+                //set toast
                 String nameText = "Name: "+ name.getText();
                 String mobileText = "  Mobile no: "+ phone.getText();
                 String numText = "  No. of people: "+ num.getText();
@@ -83,9 +81,13 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
                 Toast.makeText(MainActivity.this, nameText + mobileText + numText + setDate + setTime + zoneOP,
-                        Toast.LENGTH_LONG).show();
+                            Toast.LENGTH_LONG).show();
+
+
+
+
+
 
 
 
@@ -97,16 +99,17 @@ public class MainActivity extends AppCompatActivity {
         btnReset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //set back time to 7:30PM & date to 1 jun 2023
                 tp.setHour(19);
                 tp.setMinute(30);
                 dp.updateDate(2023,05,01);
 
+                //clear inputs
                 name.setText("");
                 phone.setText("");
                 num.setText("");
 
-                smoking.setChecked(false);
-                nonsmoking.setChecked(false);
+                area.setChecked(false);
 
 
 

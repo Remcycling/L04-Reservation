@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
                 String year = "" + dp.getYear();
                 String month = "" + (dp.getMonth()+1);
                 String day = "" + dp.getDayOfMonth();
-                String setDate = " Date: " + day + "/" + month + "/"  + year;
+                String setDate = "  Date: " + day + "/" + month + "/"  + year;
 
 
 
@@ -77,9 +77,9 @@ public class MainActivity extends AppCompatActivity {
                 }
 
                 String nameText = "Name: "+ name.getText();
-                String mobileText = " Mobile no: "+ phone.getText();
-                String numText = " No. of people: "+ num.getText();
-                String zoneOP = " Area: "+ message;
+                String mobileText = "  Mobile no: "+ phone.getText();
+                String numText = "  No. of people: "+ num.getText();
+                String zoneOP = "  Area: "+ message;
 
 
 
